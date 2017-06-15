@@ -10,7 +10,7 @@ function rd() {
         $('#searchID').html('<small>Address</small><br>' + s);
         // ADDRESS display
         $.ajax({
-            url: 'http://104.251.219.215:8080/api/address/' + s,
+            url: 'http://172.19.0.2:8080/api/address/' + s,
             success: function(data, textStatus, jqXHR) {
 
                 $('#balance').text(data.state.balance);
@@ -130,7 +130,7 @@ $(document).ready(function() {
 
    if (isInt(s)) {
     console.log('likely a block number'); 
-    window.location = 'http://104.251.219.215:8080/api/block_data/' + s;
+    window.location = 'http://172.19.0.2:8080/api/block_data/' + s;
  }
 
    if (s.length == 64) {
@@ -138,7 +138,7 @@ $(document).ready(function() {
     $('#searchID').html('<small>TXHASH</small><br>' + s);
     $.ajax({
 
-        url: 'http://104.251.219.215:8080/api/txhash/' + s,
+        url: 'http://172.19.0.2:8080/api/txhash/' + s,
         success: function(data, textStatus, jqXHR) {
             if (data.status == 'Error') {
                 console.log('Error: ' + data.error);
@@ -185,7 +185,7 @@ $(document).ready(function() {
     console.log('search string is likely an address');
     // ADDRESS display
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/address/' + s,
+        url: 'http://172.19.0.2:8080/api/address/' + s,
         success: function(data, textStatus, jqXHR) {
             $('.loader').hide();
             $('.dimmer').hide();

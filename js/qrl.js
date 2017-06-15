@@ -6,13 +6,13 @@
 function refreshData() {
    // fake call to prevent errors on Chrome
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/',
+        url: 'http://172.19.0.2:8080/api/',
               // crossDomain: true,
     // dataType: 'json',
                 type: "GET",
     });
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/stats',
+        url: 'http://172.19.0.2:8080/api/stats',
               // crossDomain: true,
     // dataType: 'json',
                 type: "GET",
@@ -22,7 +22,7 @@ function refreshData() {
         }
     });
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/last_tx/5',
+        url: 'http://172.19.0.2:8080/api/last_tx/5',
     //      crossDomain: true,
     // dataType: 'json',
         type: "GET",
@@ -32,7 +32,7 @@ function refreshData() {
         }
     });
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/last_block/5',
+        url: 'http://172.19.0.2:8080/api/last_block/5',
     //             crossDomain: true,
     // dataType: 'json',
                 type: "GET",

@@ -6,13 +6,13 @@
 function refreshData() {
    // fake call to prevent errors on Chrome
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/',
+        url: 'http://172.19.0.2:8080/api/',
               // crossDomain: true,
     // dataType: 'json',
                 type: "GET",
     });
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/next_stakers',
+        url: 'http://172.19.0.2:8080/api/next_stakers',
               // crossDomain: true,
     // dataType: 'json',
                 type: "GET",

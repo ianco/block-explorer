@@ -1,13 +1,13 @@
 function refreshRich() {
     // fake call to prevent errors on Chrome
      $.ajax({
-         url: 'http://104.251.219.215:8080/api/',
+         url: 'http://172.19.0.2:8080/api/',
                // crossDomain: true,
      // dataType: 'json',
                  type: "GET",
      });
     $.ajax({
-        url: 'http://104.251.219.215:8080/api/richlist',
+        url: 'http://172.19.0.2:8080/api/richlist',
         success: function(data, textStatus, jqXHR) {
             $('#richA1').text(data.richlist[1].balance);
             $('#richB1').text(data.richlist[1].address);
